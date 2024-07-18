@@ -1,0 +1,9 @@
+{
+  "name": "cep-api-nodejs",
+  "version": "1.0.0",
+  "description": "Desafio para uma vaga de Backend",
+  "main": "server.js",
+  "author": "Leonardo Adami",
+  "license": "MIT",
+  "private": true
+}
