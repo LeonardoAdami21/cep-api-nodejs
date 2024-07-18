@@ -1,0 +1,122 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "Api Documentation para o projeto de teste para uma vaga de emprego",
+    "version": "1.0.0",
+    "title": "Api Documentation"
+  },
+  "tags": [
+    {
+      "name": "Cep",
+      "description": "Endpoints relacionados a ao Cep"
+    }
+  ],
+  "paths": {
+    "/search/local/{cep}": {
+      "get": {
+        "tags": ["Cep"],
+        "summary": "Retorna todos os Ceps",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "cep",
+            "required": true,
+            "description": "Cep a ser pesquisado",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retorna todos os Ceps",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "cep": {
+                        "type": "string"
+                      },
+                      "logradouro": {
+                        "type": "string"
+                      },
+                      "complemento": {
+                        "type": "string"
+                      },
+                      "bairro": {
+                        "type": "string"
+                      },
+                      "localidade": {
+                        "type": "string"
+                      },
+                      "uf": {
+                        "type": "string"
+                      },
+                      "ibge": {
+                        "type": "string"
+                      },
+                      "gia": {
+                        "type": "string"
+                      },
+                      "ddd": {
+                        "type": "string"
+                      },
+                      "siafi": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Cep não encontrado"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Cep": {
+        "type": "object",
+        "properties": {
+          "cep": {
+            "type": "string"
+          },
+          "logradouro": {
+            "type": "string"
+          },
+          "complemento": {
+            "type": "string"
+          },
+          "bairro": {
+            "type": "string"
+          },
+          "localidade": {
+            "type": "string"
+          },
+          "uf": {
+            "type": "string"
+          },
+          "ibge": {
+            "type": "string"
+          },
+          "gia": {
+            "type": "string"
+          },
+          "ddd": {
+            "type": "string"
+          },
+          "siafi": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
