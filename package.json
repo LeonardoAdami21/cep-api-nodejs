@@ -8,7 +8,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "lint": "eslint 'src/**/*.js'",
     "format": "prettier-eslint --write 'src/**/*.js'"
