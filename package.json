@@ -5,5 +5,25 @@
   "main": "server.js",
   "author": "Leonardo Adami",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "lint": "eslint 'src/**/*.js'",
+    "format": "prettier-eslint --write 'src/**/*.js'"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "eslint": "8.52.0",
+    "nodemon": "^3.1.4",
+    "prettier": "3.1.0",
+    "prettier-eslint": "16.1.2"
+  }
 }
