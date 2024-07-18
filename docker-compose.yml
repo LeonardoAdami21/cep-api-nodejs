@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cep-api-nodejs
+    restart: always
+    image: cep-api-nodejs:latest
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    environment:
+      APP_PORT: ${APP_PORT}
+      VIACEP_URL: ${VIACEP_URL}
+    ports:
+      - 7000:7000
